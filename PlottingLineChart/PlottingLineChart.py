@@ -16,15 +16,13 @@ def animate(i):
         x = data['x_value']
         y = data['y_value']
         plt.cla() #make sure the color of the plot is the same
-        plt.plot(x, y, label = 'Force (unit: N)')
+        plt.plot(x, y, label = 'Force (unit: N)', color='red')
         plt.legend(loc = 'upper left')
-        plt.ylim(-1, 12)
+        plt.ylim(-2, 15)
 
     except EmptyDataError:
         pass
 
 ani = FuncAnimation(plt.gcf(), animate, interval=10, save_count=MAX_FRAMES)
-
-
 plt.tight_layout()
 plt.show()
