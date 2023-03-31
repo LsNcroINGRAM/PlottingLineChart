@@ -6,9 +6,6 @@ from matplotlib.animation import FuncAnimation
 
 plt.style.use('fivethirtyeight')
 
-x_vals = []
-y_vals = []
-
 index = count()
 
 def animate(i):
@@ -18,14 +15,14 @@ def animate(i):
         x = data['x_value']
         y = data['y_value']
         plt.cla() #make sure the color of the plot is the same
-        plt.plot(x, y, label = 'Force')
+        plt.plot(x, y, label = 'Force (unit: N)')
         plt.legend(loc = 'upper left')
-        plt.ylim(-5, 15)
+        plt.ylim(-1, 12)
 
     except EmptyDataError:
         pass
 
-ani = FuncAnimation(plt.gcf(), animate, interval = 5)
+ani = FuncAnimation(plt.gcf(), animate, interval = 10)
 
 plt.tight_layout()
 plt.show()
