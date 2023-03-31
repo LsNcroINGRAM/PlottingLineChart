@@ -20,6 +20,7 @@ def animate(i):
         plt.cla()
         plt.plot(x, y, label = 'Force')
         plt.legend(loc = 'upper left')
+        plt.ylim(-10, 50)
 
     except EmptyDataError:
         pass
