@@ -26,7 +26,7 @@ def animate(i):
     except EmptyDataError:
         df = pd.DataFrame()
 
-ani = FuncAnimation(plt.gcf(), animate, interval = 10)
+ani = FuncAnimation(plt.gcf(), animate, interval = 5)
 
 plt.tight_layout()
 plt.show()
