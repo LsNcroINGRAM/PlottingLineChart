@@ -13,7 +13,8 @@ index = count()
 
 def animate(i):
     try:
-        data = pd.read_csv(r'\Users\User\source\repos\LsNcroINGRAM\GeneratingData\GeneratingData\data.csv')
+        #data = pd.read_csv(r'\Users\User\source\repos\LsNcroINGRAM\GeneratingData\GeneratingData\data.csv')
+        data = pd.read_csv(r'\Users\User\source\repos\LsNcroINGRAM\ReadForceSensor\Project1\data.csv')
         x = data['x_value']
         y = data['y_value']
 
